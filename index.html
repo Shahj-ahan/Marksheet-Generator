@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marksheet Generator</title>
+    <style>
+        .title {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            margin-bottom: 20px;
+        }
+
+        form {
+            justify-content: center;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+        }
+
+        form label {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+
+        form input {
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            width: 48%;
+            box-sizing: border-box;
+        }
+
+        form input::placeholder {
+            color: #999;
+            font-size: 14px;
+        }
+
+        form input:focus {
+            outline: none;
+            border-color: #007BFF;
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+        }
+        #result{
+            box-shadow: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 10px;
+            border: 2px solid white;
+            justify-content: center;
+            align-items: center;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="title">Marksheet Generator</h1>
+
+    <form action="submit">
+        <label>
+            <input type="text" name="subject1" placeholder="subject name " required id="subject1">
+            <input type="number" name="marks1" placeholder="Enter Marks" required id="marks1">
+        </label>
+        <label>
+            <input type="text" name="subject name2" placeholder="subject name " required id="subject2">
+            <input type="number" name="marks2" placeholder="Enter Marks" id="marks2">
+        </label>
+        <label>
+            <input type="text" name="subject name3" placeholder="subject name "required id="subject3">
+            <input type="number" name="marks3" placeholder="Enter Marks" id="marks3">
+        </label>
+        <label>
+            <input type="text" name="subject name4" placeholder="subject name " required id="subject4">
+            <input type="number" name="marks4" placeholder="Enter Marks" required id="marks4">
+        </label>
+        <label>
+            <input type="text" name="subject name5" placeholder="subject name" required id="subject5">
+            <input type="number" name="marks5" placeholder="Enter Marks" required id="marks5">
+        </label>
+        <button id="GenerateBtn" type="submit" style="padding: 6px; display: flex; justify-content: center; border-color: #bbb8b8; border-radius: 6px; margin-left: 160px; cursor: pointer;">Submit</button>
+    </form>
+
+    <div id="result" class="result"></div>
+</body>
+        <script src="app.js"></script>
+</html>
